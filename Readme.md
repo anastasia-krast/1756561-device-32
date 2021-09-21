@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Anastasiia Krasteleva](https://up.htmlacademy.ru/htmlcss/32/user/1756561).
-* Наставник: Ярослав Макаренко.
+* Наставник: [Ярослав Макаренко](https://htmlacademy.ru/profile/id234926).
 
 ---
 
