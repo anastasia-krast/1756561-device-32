@@ -14,7 +14,7 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
           <label class="visually-hidden" for="search-1">Поле ввода</label>
           <input class="field" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
-          <input class="search-button visually-hidden" type="submit" value="Найти">
+          <button class="search-button visually-hidden" type="submit">Найти</button>
         </form>
 
         <!--Навигация верхний блок-->
@@ -30,20 +30,20 @@
             </a>
           </li>
           <li class="navigation-item">
-            <button class="navigation-button cart-button" type="button">
-              <span class="navigation-text">Корзина</span>
+            <a class="navigation-button cart-button" href="#">
               <span class="goods-number">2</span>
+              <span class="navigation-text">Корзина</span>
               <span class="visually-hidden">Корзина с 2 товарами</span>
-            </button>
+            </a>
           </li>
         </ul>
 
         <!--Навигация нижний блок-->
         <ul class="navigation-list-shop">
           <li class="navigation-item">
-            <button class="navigation-button catalog-button" type="button">
+            <a class="navigation-link" href="catalog.html">
               <span class="navigation-text">Каталог товаров</span>
-            </button>
+            </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="delivery.html">
@@ -79,14 +79,12 @@
             <img class="slider-image" src="#" alt="Квадрокоптер">
 
             <!--Навигация фото-слайдера-->
-            <nav class="photo-slider-navigation">
-              <button class="photo-slider-button slider-prev" type="button">
-                <span class="visually-hidden">Предыдущее фото</span>
-              </button>
-              <button class="photo-slider-button slider-next" type="button">
-                <span class="visually-hidden">Следующее фото</span>
-              </button>
-            </nav>
+            <button class="photo-slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="photo-slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
           </section>
 
           <!--Основая информация о товаре-->
@@ -118,7 +116,6 @@
         </article>
 
         <!--Навигация основного слайдера-->
-        <nav class="main-slider-navigation">
           <ol class="main-slider-pagination">
             <li class="main-slider-pagination-item">
               <button type="button" class="main-slider-pagination-button slider-pagination-button-current">
@@ -136,8 +133,6 @@
               </button>
             </li>
           </ol>
-        </nav>
-
 
       </section>
 
@@ -190,7 +185,6 @@
         <h2 class="visually-hidden">Услуги</h2>
 
         <!--Табы-->
-        <nav class="services-navigation">
           <ul class="services-navigation-tabs">
             <li class="services-navigation-items">
               <a class="details-button tabs-button tabs-button-current" href="#">Доставка</a>
@@ -202,7 +196,6 @@
               <a class="details-button tabs-button" href="#">Кредит</a>
             </li>
           </ul>
-        </nav>
 
         <!--Контент-->
         <article class="services-item">
@@ -273,7 +266,7 @@
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email-1">Поле ввода</label>
           <input class="field" type="email" id="email-1" name="newsletter-email" placeholder="Ваш e-mail" required>
-          <input class="search-button" type="submit" value="Подписаться">
+          <button class="search-button" type="submit">Подписаться</button>
         </form>
 
         <i class="note">Это бесплатно</i>
