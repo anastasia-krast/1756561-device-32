@@ -1,0 +1,241 @@
+/* Категории */
+
+.categories-link::before {
+  content: "";
+  display: inline-block;
+  background: #FFE17F;
+  width: 160px;
+  height: 160px;
+  margin: 5px;
+  border: none;
+}
+
+.category-1::before {
+  background-image: url(../img/categories-01.svg);
+}
+
+.category-2::before {
+  background-image: url(../img/categories-02.svg);
+}
+
+.category-3::before {
+  background-image: url(../img/categories-03.svg);
+}
+
+.category-4::before {
+  background-image: url(../img/categories-04.svg);
+}
+
+.category-5::before {
+  background-image: url(../img/categories-05.svg);
+}
+
+.category-6::before {
+  background-image: url(../img/categories-06.svg);
+}
+
+.categories-link:hover:before {
+  background: #FFC700;
+}
+
+.category-1:hover:before {
+  background-image: url(../img/categories-01.svg);
+}
+
+.category-2:hover:before {
+  background-image: url(../img/categories-02.svg);
+}
+
+.category-3:hover:before {
+  background-image: url(../img/categories-03.svg);
+}
+
+.category-4:hover:before {
+  background-image: url(../img/categories-04.svg);
+}
+
+.category-5:hover:before {
+  background-image: url(../img/categories-05.svg);
+}
+
+.category-6:hover:before {
+  background-image: url(../img/categories-06.svg);
+}
+
+.categories-link:focus:before {
+  background: #FFE17F;
+  border: 5px solid #AF4FFF;
+  margin: 0px;
+}
+
+.category-1:focus:before {
+  background-image: url(../img/categories-01.svg);
+}
+
+.category-2:focus:before {
+  background-image: url(../img/categories-02.svg);
+}
+
+.category-3:focus:before {
+  background-image: url(../img/categories-03.svg);
+}
+
+.category-4:focus:before {
+  background-image: url(../img/categories-04.svg);
+}
+
+.category-5:focus:before {
+  background-image: url(../img/categories-05.svg);
+}
+
+.category-6:focus:before {
+  background-image: url(../img/categories-06.svg);
+}
+
+.categories-link:active:before {
+  background: #FFC700;
+  border: none;
+  margin: 5px;
+}
+
+.category-1:active:before {
+  background-image: url(../img/categories-01-active.svg);
+}
+
+.category-2:active:before {
+  background-image: url(../img/categories-02-active.svg);
+}
+
+.category-3:active:before {
+  background-image: url(../img/categories-03-active.svg);
+}
+
+.category-4:active:before {
+  background-image: url(../img/categories-04-active.svg);
+}
+
+.category-5:active:before {
+  background-image: url(../img/categories-05-active.svg);
+}
+
+.category-6:active:before {
+  background-image: url(../img/categories-06-active.svg);
+}
+
+/* Табы */
+
+.services-item-1::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/tabs-1.svg);
+  width: 180px;
+  height: 319px;
+}
+
+.services-item-2::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/tabs-2.svg);
+  width: 180px;
+  height: 319px;
+}
+
+.services-item-3::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/tabs-3.svg);
+  width: 180px;
+  height: 319px;
+}
+
+.page-footer {
+  background: #444444;
+}
+
+/* Соц сети */
+
+.social-media-links::before {
+  content: "";
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  margin: 15px;
+}
+
+.facebook::before {
+  background-image: url(../img/facebook.svg);
+}
+
+.instagram::before {
+  background-image: url(../img/instagram.svg);
+}
+
+.twitter::before {
+  background-image: url(../img/twitter.svg);
+}
+
+
+.social-media-links:hover:before {
+  background: #FFC700;
+}
+
+.facebook:hover:before {
+  background-image: url(../img/facebook.svg);
+}
+
+.instagram:hover:before {
+  background-image: url(../img/instagram.svg);
+}
+
+.twitter:hover:before {
+  background-image: url(../img/twitter.svg);
+}
+
+
+.social-media-links:focus:before {
+  background: none;
+  border: 5px solid #AF4FFF;
+  margin: 10px;
+}
+
+.facebook:focus:before {
+  background-image: url(../img/facebook-focus.svg);
+}
+
+.instagram:focus:before {
+  background-image: url(../img/instagram-focus.svg);
+}
+
+.twitter:focus:before {
+  background-image: url(../img/twitter-focus.svg);
+}
+
+
+.social-media-links:active:before {
+  background: #FFC700;
+  border: none;
+  margin: 15px;
+}
+
+.facebook:active:before {
+  background-image: url(../img/facebook-active.svg);
+}
+
+.instagram:active:before {
+  background-image: url(../img/instagram-active.svg);
+}
+
+.twitter:active:before {
+  background-image: url(../img/twitter-active.svg);
+}
+
+
+
+
+
+
+
+
