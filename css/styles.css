@@ -10,86 +10,86 @@
   border: none;
 }
 
-.category-1::before {
-  background-image: url(../img/categories-01.svg);
+.category-1-VR::before {
+  background-image: url(../img/categories-01-VR.svg);
 }
 
-.category-2::before {
-  background-image: url(../img/categories-02.svg);
+.category-2-selfie-sticks::before {
+  background-image: url(../img/categories-02-selfie-sticks.svg);
 }
 
-.category-3::before {
-  background-image: url(../img/categories-03.svg);
+.category-3-action-cameras::before {
+  background-image: url(../img/categories-03-action-cameras.svg);
 }
 
-.category-4::before {
-  background-image: url(../img/categories-04.svg);
+.category-4-fitness-bands::before {
+  background-image: url(../img/categories-04-fitness-bands.svg);
 }
 
-.category-5::before {
-  background-image: url(../img/categories-05.svg);
+.category-5-smart-watches::before {
+  background-image: url(../img/categories-05-smart-watches.svg);
 }
 
-.category-6::before {
-  background-image: url(../img/categories-06.svg);
+.category-6-drones::before {
+  background-image: url(../img/categories-06-drones.svg);
 }
 
 .categories-link:hover:before {
   background: #FFC700;
 }
 
-.category-1:hover:before {
-  background-image: url(../img/categories-01.svg);
+.category-1-VR:hover:before {
+  background-image: url(../img/categories-01-VR.svg);
 }
 
-.category-2:hover:before {
-  background-image: url(../img/categories-02.svg);
+.category-2-selfie-sticks:hover:before {
+  background-image: url(../img/categories-02-selfie-sticks.svg);
 }
 
-.category-3:hover:before {
-  background-image: url(../img/categories-03.svg);
+.category-3-action-cameras:hover:before {
+  background-image: url(../img/categories-03-action-cameras.svg);
 }
 
-.category-4:hover:before {
-  background-image: url(../img/categories-04.svg);
+.category-4-fitness-bands:hover:before {
+  background-image: url(../img/categories-04-fitness-bands.svg);
 }
 
-.category-5:hover:before {
-  background-image: url(../img/categories-05.svg);
+.category-5-smart-watches:hover:before {
+  background-image: url(../img/categories-05-smart-watches.svg);
 }
 
-.category-6:hover:before {
-  background-image: url(../img/categories-06.svg);
+.category-6-drones:hover:before {
+  background-image: url(../img/categories-06-drones.svg);
 }
 
 .categories-link:focus:before {
   background: #FFE17F;
   border: 5px solid #AF4FFF;
-  margin: 0px;
+  margin: 0;
 }
 
-.category-1:focus:before {
-  background-image: url(../img/categories-01.svg);
+.category-1-VR:focus:before {
+  background-image: url(../img/categories-01-VR.svg);
 }
 
-.category-2:focus:before {
-  background-image: url(../img/categories-02.svg);
+.category-2-selfie-sticks:focus:before {
+  background-image: url(../img/categories-02-selfie-sticks.svg);
 }
 
-.category-3:focus:before {
-  background-image: url(../img/categories-03.svg);
+.category-3-action-cameras:focus:before {
+  background-image: url(../img/categories-03-action-cameras.svg);
 }
 
-.category-4:focus:before {
-  background-image: url(../img/categories-04.svg);
+.category-4-fitness-bands:focus:before {
+  background-image: url(../img/categories-04-fitness-bands.svg);
 }
 
-.category-5:focus:before {
-  background-image: url(../img/categories-05.svg);
+.category-5-smart-watches:focus:before {
+  background-image: url(../img/categories-05-smart-watches.svg);
 }
 
-.category-6:focus:before {
-  background-image: url(../img/categories-06.svg);
+.category-6-drones:focus:before {
+  background-image: url(../img/categories-06-drones.svg);
 }
 
 .categories-link:active:before {
@@ -98,52 +98,52 @@
   margin: 5px;
 }
 
-.category-1:active:before {
-  background-image: url(../img/categories-01-active.svg);
+.category-1-VR:active:before {
+  background-image: url(../img/categories-01-VR-active.svg);
 }
 
-.category-2:active:before {
-  background-image: url(../img/categories-02-active.svg);
+.category-2-selfie-sticks:active:before {
+  background-image: url(../img/categories-02-selfie-sticks-active.svg);
 }
 
-.category-3:active:before {
-  background-image: url(../img/categories-03-active.svg);
+.category-3-action-cameras:active:before {
+  background-image: url(../img/categories-03-action-cameras-active.svg);
 }
 
-.category-4:active:before {
-  background-image: url(../img/categories-04-active.svg);
+.category-4-fitness-bands:active:before {
+  background-image: url(../img/categories-04-fitness-bands-active.svg);
 }
 
-.category-5:active:before {
-  background-image: url(../img/categories-05-active.svg);
+.category-5-smart-watches:active:before {
+  background-image: url(../img/categories-05-smart-watches-active.svg);
 }
 
-.category-6:active:before {
-  background-image: url(../img/categories-06-active.svg);
+.category-6-drones:active:before {
+  background-image: url(../img/categories-06-drones-active.svg);
 }
 
 /* Табы */
 
-.services-item-1::after {
+.services-item-1-delivery::after {
   content: "";
   display: inline-block;
-  background-image: url(../img/tabs-1.svg);
+  background-image: url(../img/tabs-1-delivery.svg);
   width: 180px;
   height: 319px;
 }
 
-.services-item-2::after {
+.services-item-2-warranty::after {
   content: "";
   display: inline-block;
-  background-image: url(../img/tabs-2.svg);
+  background-image: url(../img/tabs-2-warranty.svg);
   width: 180px;
   height: 319px;
 }
 
-.services-item-3::after {
+.services-item-3-credit::after {
   content: "";
   display: inline-block;
-  background-image: url(../img/tabs-3.svg);
+  background-image: url(../img/tabs-3-credit.svg);
   width: 180px;
   height: 319px;
 }
@@ -232,6 +232,30 @@
   background-image: url(../img/twitter-active.svg);
 }
 
+/* Логотип Академии */
+
+.academy-logo {
+  fill: #FFC700;
+  border: none;
+  padding: 10px;
+}
+
+.academy-logo:hover {
+  fill: #FFFFFF;
+}
+
+.logo-link:focus .academy-logo {
+  border: 2px solid #AF4FFF;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.logo-link:active .academy-logo {
+  fill: #FFFFFF;
+  opacity: 0.3;
+  border: none;
+  padding: 10px;
+}
 
 
 
