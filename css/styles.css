@@ -1,4 +1,311 @@
-/* Категории */
+/* Шрифты */
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Global */
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #FFFFFF;
+}
+
+/* Pages */
+
+.page-header {
+  color: #000000;
+  background: #FFE17F;
+}
+
+.navigation-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.goods-number {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.big-navigation-link {
+  font-family: "Raleway", serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalog-categories-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.slider-item-number {
+  font-weight: 800;
+  font-size: 180px;
+  line-height: 30px;
+  color: #FFFFFF;
+  background-color: #FFE17F;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  text-align: left;
+}
+
+.details-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.slider-item-specifications-term {
+  font-size: 16px;
+}
+
+.slider-item-specifications-description {
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.categories-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
+}
+
+.tabs-button-current {
+  color: #FFE17F;
+  background-color: #000000;
+}
+
+.services-background {
+  background-color: #F0F0F0;
+}
+
+.services-rare-items-request {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #F0F0F0;
+  text-decoration: none;
+}
+
+.delivery-companies {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.contacts-phone {
+  color: #444444;
+}
+
+.subscription-background {
+  background-color: #F0F0F0;
+}
+
+.subscribe-button {
+  border: 3px solid rgba(0 0 0 0.1);
+  padding: 16px 42px 16px 42px;
+}
+
+.page-footer {
+  color: #FFFFFF;
+  background: #444444;
+  font-size: 16px;
+}
+
+.footer-address {
+  line-height: 19px;
+}
+
+.footer-button {
+  color: #FFFFFF;
+}
+
+.footer-contacts-phone {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+/* Каталог */
+
+.navigation-sign-out {
+  opacity: 0.3;
+}
+
+.main-catalog {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.catalog-header-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.breadcrumbs-link {
+  opacity: 0.6;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-title {
+  text-align: left;
+}
+
+.catalog-filter-form {
+  background-color: #EBEBEB;
+}
+
+.catalog-filter-title-background {
+  background-color: #DCDCDC;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.catalog-filter-label {
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.3;
+  text-align: center;
+}
+
+.sorting-background {
+  background-color: #EBEBEB;
+}
+
+.catalog-sorting-criterions-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
+}
+
+.product-badge {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.pagination {
+  background-color: #EBEBEB;
+}
+
+.pagination-link {
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+/* Категории. Псевдоклассы, псевдоэлементы */
 
 .categories-link::before {
   content: "";
@@ -122,7 +429,7 @@
   background-image: url(../img/categories-06-drones-active.svg);
 }
 
-/* Табы */
+/* Табы, картинки */
 
 .services-item-1-delivery::after {
   content: "";
@@ -148,9 +455,6 @@
   height: 319px;
 }
 
-.page-footer {
-  background: #444444;
-}
 
 /* Соц сети */
 

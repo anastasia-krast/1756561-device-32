@@ -28,14 +28,14 @@
           </a>
 
           <a class="navigation-link" href="#">
-            <span class="navigation-text">Выйти</span>
+            <span class="navigation-text navigation-sign-out">Выйти</span>
           </a>
 
           <a class="navigation-link" href="#">
             <span class="navigation-text">Сравнить</span>
           </a>
 
-          <a class="navigation-button cart-button" href="#">
+          <a class="navigation-link navigation-button cart-button" href="#">
             <span class="goods-number">2</span>
             <span class="navigation-text">Корзина</span>
           </a>
@@ -44,7 +44,7 @@
         <!--Навигация нижний блок-->
         <ul class="navigation-list-shop">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Каталог товаров</span>
             </a>
             <ul class="catalog-categories-list">
@@ -82,17 +82,17 @@
 
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Доставка</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Гарантия</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Контакты</span>
             </a>
         </ul>
@@ -120,7 +120,7 @@
 
       <!---Фильтры-->
       <section class="catalog-filter">
-        <h2 class="catalog-title">Фильтры:</h2>
+        <h2 class="details-button catalog-title catalog-filter-title-background">Фильтры:</h2>
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
           <fieldset class="catalog-filter-group">
@@ -199,32 +199,34 @@
       </section>
 
       <section class="catalog-sorting">
-        <h2 class="catalog-title">Сортировка:</h2>
+        <div class="sorting-background">
+          <h2 class="details-button catalog-title">Сортировка:</h2>
 
-        <ul class="catalog-sorting-criterions-list">
-          <li class="catalog-sorting-criterions-items">
-            <a class="catalog-sorting-criterions-link" href="#">По цене</a>
-          </li>
-          <li class="catalog-sorting-criterions-items">
-            <a class="catalog-sorting-criterions-link" href="#">По типу</a>
-          </li>
-          <li class="catalog-sorting-criterions-items">
-            <a class="catalog-sorting-criterions-link" href="#">По популярности</a>
-          </li>
-        </ul>
+          <ul class="catalog-sorting-criterions-list">
+            <li class="catalog-sorting-criterions-items">
+              <a class="catalog-sorting-criterions-link" href="#">По цене</a>
+            </li>
+            <li class="catalog-sorting-criterions-items">
+              <a class="catalog-sorting-criterions-link" href="#">По типу</a>
+            </li>
+            <li class="catalog-sorting-criterions-items">
+              <a class="catalog-sorting-criterions-link" href="#">По популярности</a>
+            </li>
+          </ul>
 
-        <ul class="catalog-sorting-ways-list">
-          <li class="catalog-sorting-ways-item">
-            <a class="catalog-sorting-ways-link" href="#">
-              <span class="visually-hidden">По возрастанию</span>
-            </a>
-          </li>
-          <li class="catalog-sorting-ways-item">
-            <a class="catalog-sorting-ways-link" href="#">
-              <span class="visually-hidden">По убыванию</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="catalog-sorting-ways-list">
+            <li class="catalog-sorting-ways-item">
+              <a class="catalog-sorting-ways-link" href="#">
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+            </li>
+            <li class="catalog-sorting-ways-item">
+              <a class="catalog-sorting-ways-link" href="#">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="catalog-products">
@@ -235,7 +237,7 @@
             <div class="product-visual">
               <img class="product-card-image" src="img/selfie-sticks-product-1.jpg" alt="Любительская селфи-палка"
                    width="360" height="380">
-              <a class="product-card-details-link" href="#">Подробнее</a>
+              <a class="details-button product-card-details-link" href="#">Подробнее</a>
             </div>
             <div class="product-info">
               <a class="product-card-title-link" href="#">
@@ -250,7 +252,7 @@
             <div class="product-visual">
               <img class="product-card-image" src="img/selfie-sticks-product-2.jpg" alt="Профессиональная селфи-палка"
                    width="360" height="380">
-              <a class="product-card-details-link" href="#">Подробнее</a>
+              <a class="details-button product-card-details-link" href="#">Подробнее</a>
             </div>
             <div class="product-info">
               <a class="product-card-title-link" href="#">
@@ -265,7 +267,7 @@
             <div class="product-visual">
               <img class="product-card-image" src="img/selfie-sticks-product-3.jpg" alt="Непотопляемая селфи-палка"
                    width="360" height="380">
-              <a class="product-card-details-link" href="#">Подробнее</a>
+              <a class="details-button product-card-details-link" href="#">Подробнее</a>
             </div>
             <div class="product-info">
               <a class="product-card-title-link" href="#">
@@ -280,7 +282,7 @@
             <div class="product-visual">
               <img class="product-card-image" src="img/selfie-sticks-product-4.jpg" alt="Селфи-палка «Следуй за мной»"
                    width="360" height="380">
-              <a class="product-card-details-link" href="#">Подробнее</a>
+              <a class="details-button product-card-details-link" href="#">Подробнее</a>
             </div>
             <div class="product-info">
               <a class="product-card-title-link" href="#">
@@ -292,11 +294,11 @@
           </li>
         </ul>
 
-        <button class="button show-more-button" type="button">Показать ещё</button>
+        <button class="details-button show-more-button" type="button">Загрузить ещё</button>
 
         <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
+            <a class="details-button pagination-prev pagination-disabled">
               <span class="pagination-text">Назад</span>
             </a>
           </li>
@@ -313,7 +315,7 @@
             <a class="pagination-link" href="#">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
+            <a class="details-button pagination-next" href="#">
               <span class="pagination-text">Вперед</span>
             </a>
           </li>
@@ -327,7 +329,7 @@
              height="36">
       </a>
 
-      <address class="footer-address">
+      <address class="contacts-address footer-address">
         <p class="footer-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
 
@@ -336,13 +338,13 @@
         <h2 class="visually-hidden">Полезные ссылки</h2>
         <ul class="footer-links-list">
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Доставка</a>
+            <a class="details-button footer-button" href="#">Доставка</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Гарантия</a>
+            <a class="details-button footer-button" href="#">Гарантия</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Контакты</a>
+            <a class="details-button footer-button" href="#">Контакты</a>
           </li>
         </ul>
       </section>
@@ -352,25 +354,25 @@
         <h2 class="visually-hidden">Мы с социальных сетях</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-button social-media-links facebook" href="https://www.facebook.com/htmlacademy">
+            <a class="social-media-links facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-button social-media-links instagram" href="https://www.instagram.com/htmlacademy/">
+            <a class="social-media-links instagram" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-button social-media-links twitter" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-media-links twitter" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
         </ul>
       </section>
 
-      <p class="footer-address">
-        <a class="contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
+      <p>
+        <a class="footer-contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
       </p>
 
       <a class="logo-link" href="https://htmlacademy.ru/">

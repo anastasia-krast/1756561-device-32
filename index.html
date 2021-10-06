@@ -33,7 +33,7 @@
             <span class="navigation-text">Сравнить</span>
           </a>
 
-          <a class="navigation-button cart-button" href="#">
+          <a class="navigation-link navigation-button cart-button" href="#">
             <span class="goods-number">2</span>
             <span class="navigation-text">Корзина</span>
           </a>
@@ -42,7 +42,7 @@
         <!--Навигация нижний блок-->
         <ul class="navigation-list-shop">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Каталог товаров</span>
             </a>
             <ul class="catalog-categories-list">
@@ -80,17 +80,17 @@
 
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Доставка</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Гарантия</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="big-navigation-link" href="#">
               <span class="navigation-text">Контакты</span>
             </a>
         </ul>
@@ -232,42 +232,45 @@
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
 
-        <!--Табы-->
-        <ul class="services-navigation-tabs">
-          <li class="services-navigation-items">
-            <a class="details-button tabs-button" href="#">Доставка</a>
-          </li>
-          <li class="services-navigation-items">
-            <a class="details-button tabs-button" href="#">Гарантия</a>
-          </li>
-          <li class="services-navigation-items">
-            <a class="details-button tabs-button" href="#">Кредит</a>
-          </li>
-        </ul>
+        <div class="services-background">
 
-        <!--Контент-->
-        <ul class="services-list">
-          <li class="services-item-1-delivery">
-            <h3 class="title services-title">Доставка</h3>
-            <p class="main-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-            </p>
-          </li>
+          <!--Табы-->
+          <ul class="services-navigation-tabs">
+            <li class="services-navigation-items">
+              <a class="details-button tabs-button tabs-button-current" href="#">Доставка</a>
+            </li>
+            <li class="services-navigation-items">
+              <a class="details-button tabs-button" href="#">Гарантия</a>
+            </li>
+            <li class="services-navigation-items">
+              <a class="details-button tabs-button" href="#">Кредит</a>
+            </li>
+          </ul>
 
-          <li class="services-item-2-warranty">
-            <h3 class="title services-title">Гарантия</h3>
-            <p class="main-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
-              выдадим вам новый. Товар, не дом, конечно же.
-            </p>
-          </li>
+          <!--Контент-->
+          <ul class="services-list">
+            <li class="services-item-1-delivery">
+              <h3 class="title services-title">Доставка</h3>
+              <p class="main-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+              </p>
+            </li>
 
-          <li class="services-item-3-credit">
-            <h3 class="title services-title">Кредит</h3>
-            <p class="main-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
-              выгодные условия кредита. Выгодные для банка, разумеется.
-            </p>
-          </li>
-        </ul>
+            <li class="services-item-2-warranty">
+              <h3 class="title services-title">Гарантия</h3>
+              <p class="main-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
+                выдадим вам новый. Товар, не дом, конечно же.
+              </p>
+            </li>
+
+            <li class="services-item-3-credit">
+              <h3 class="title services-title">Кредит</h3>
+              <p class="main-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+                выгодные условия кредита. Выгодные для банка, разумеется.
+              </p>
+            </li>
+          </ul>
+        </div>
 
         <!--Блок про редкие товары-->
         <h3 class="visually-hidden">Заказ редких товаров</h3>
@@ -319,6 +322,7 @@
 
       <!--Подписка на рассылку-->
       <section class="subscription">
+        <div class="subscription-background">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <strong class="title subscription-tagline">Подпишитесь на рассылку</strong>
         <p class="main-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также
@@ -328,10 +332,11 @@
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email-1">Адрес для рассылки</label>
           <input class="field" type="email" id="email-1" name="newsletter-email" placeholder="Ваш e-mail" required>
-          <button class="search-button" type="submit">Подписаться</button>
+          <button class="details-button subscribe-button" type="submit">Подписаться</button>
         </form>
 
         <span class="note">Это бесплатно</span>
+          </div>
       </section>
 
     </main>
@@ -342,7 +347,7 @@
              height="36">
       </a>
 
-      <address class="footer-address">
+      <address class="contacts-address footer-address">
         <p class="footer-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
 
@@ -351,13 +356,13 @@
         <h2 class="visually-hidden">Полезные ссылки</h2>
         <ul class="footer-links-list">
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Доставка</a>
+            <a class="details-button footer-button" href="#">Доставка</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Гарантия</a>
+            <a class="details-button footer-button" href="#">Гарантия</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-button" href="#">Контакты</a>
+            <a class="details-button footer-button" href="#">Контакты</a>
           </li>
         </ul>
       </section>
@@ -367,25 +372,25 @@
         <h2 class="visually-hidden">Мы с социальных сетях</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-button social-media-links facebook" href="https://www.facebook.com/htmlacademy">
+            <a class="social-media-links facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-button social-media-links instagram" href="https://www.instagram.com/htmlacademy/">
+            <a class="social-media-links instagram" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-button social-media-links twitter" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-media-links twitter" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
         </ul>
       </section>
 
-      <p class="footer-address">
-        <a class="contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
+      <p>
+        <a class="footer-contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
       </p>
 
       <a class="logo-link" href="https://htmlacademy.ru/">
