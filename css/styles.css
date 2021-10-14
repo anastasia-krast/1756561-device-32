@@ -108,7 +108,7 @@ body {
   background: var(--special-yellow-light);
   width: 1160px;
   margin: 0 auto;
-  padding-bottom: 57px;
+  padding-bottom: 38px;
 }
 
 .navigation {
@@ -144,7 +144,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: row;
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-item-catalog {
@@ -174,7 +174,7 @@ body {
 .catalog-categories-list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   flex-flow: column wrap;
   height: 90px;
@@ -204,7 +204,6 @@ body {
 /* Слайдер */
 
 
-
 .slider-list {
   margin: 0;
   padding: 0;
@@ -231,7 +230,7 @@ body {
   text-align: left;
 }
 
-.details-button {
+.main-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -284,7 +283,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  list-style: none;
+  list-style-type: none;
 }
 
 .categories-items {
@@ -428,7 +427,7 @@ body {
   padding: 0;
   width: 277px;
   border-right: 7px solid var(--basic-black);
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-navigation-item {
@@ -445,7 +444,7 @@ body {
 .services-list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-item {
@@ -568,7 +567,7 @@ body {
 .footer-lists {
   margin: 0 auto;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -720,12 +719,28 @@ body {
   color: var(--basic-black);
 }
 
+.catalog-header {
+  width: 1040px;
+  padding-top: 37px;
+  padding-bottom: 49px;
+  margin: 0 auto;
+}
+
 .catalog-header-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
   color: var(--basic-black);
+  margin: 0 0 24px 0;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .breadcrumbs-link {
@@ -734,16 +749,47 @@ body {
   color: var(--basic-black);
 }
 
+.catalog-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side-background {
+  background-color: var(--basic-grey-light);
+  flex-grow: 1;
+}
+
+.left-side-title-background {
+  height: 70px;
+  background-color: var(--basic-grey);
+}
+
+.right-side-background {
+  height: 70px;
+  background-color: var(--basic-grey-light);
+  flex-grow: 1;
+}
+
+.catalog-filter {
+  width: 328px;
+  background-color: var(--basic-grey-light);
+}
+
 .catalog-title {
+  width: 200px;
   text-align: left;
+  margin: 0;
+  padding: 25px 68px 24px 60px;
+}
+
+.catalog-filter-title-container {
+  background-color: var(--basic-grey);
 }
 
 .catalog-filter-form {
   background-color: var(--basic-grey-light);
-}
-
-.catalog-filter-title-background {
-  background-color: var(--basic-grey);
+  padding-left: 60px;
+  padding-right: 69px;
 }
 
 .catalog-filter-title {
@@ -760,13 +806,49 @@ body {
   text-align: center;
 }
 
-.sorting-background {
+.catalog-right-part-container {
+  width: 832px;
+}
+
+.catalog-sorting {
   background-color: var(--basic-grey-light);
+  display: flex;
+  flex-direction: row;
+  padding-left: 12px;
+}
+
+.catalog-sorting-criterions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .catalog-sorting-criterions-link {
   color: inherit;
   text-decoration: none;
+}
+
+.catalog-sorting-ways-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.catalog-products {
+  padding: 69px 0 77px 72px;
+}
+
+.product-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-card {
+  width: 360px;
 }
 
 .product-card-title-link {
@@ -799,8 +881,28 @@ body {
   opacity: 0.6;
 }
 
+.show-more-button {
+  border: 3px solid rgba(var(--basic-black-rgb), 0.1);
+  background-color: var(--basic-white);
+  padding: 14px 0;
+  margin: 46px 0 51px 0;
+  width: 100%;
+}
+
 .pagination {
   background-color: var(--basic-grey-light);
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 30px;
+
+}
+
+.pagination-item {
+  padding: 0;
+  margin: 0;
 }
 
 .pagination-link {
