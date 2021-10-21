@@ -143,6 +143,13 @@ img {
   margin-bottom: 20px;
 }
 
+.navigation-up-line-container {
+  display: flex;
+  flex-direction: row;
+  width: 543px;
+  flex-wrap: wrap;
+}
+
 .search-form {
   margin-right: auto;
 }
@@ -240,7 +247,7 @@ img {
 }
 
 .navigation-item-warranty {
-  margin: 0 48px 0 -10px;
+  margin-right: 38px;
 }
 
 .big-navigation-link {
@@ -851,7 +858,6 @@ img {
   color: var(--basic-white);
   padding: 14px 20px 15px;
   display: flex;
-  margin: 0 -6px;
 }
 
 .footer-button:focus {
