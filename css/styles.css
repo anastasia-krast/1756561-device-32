@@ -417,6 +417,7 @@ img {
   justify-content: space-between;
   list-style-type: none;
   margin: 0 -5px 81px;
+  flex-wrap: wrap;
 }
 
 .categories-link {
@@ -669,14 +670,14 @@ img {
 }
 
 .services-rare-items-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 125px auto 125px;
   align-items: center;
   background-color: var(--basic-light);
   font-size: 20px;
   line-height: 23px;
   margin: 5px 0;
+
 }
 
 .services-rare-items-link:focus {
@@ -701,8 +702,6 @@ img {
   background-image: url("../img/icon-info.svg");
   border-radius: 100%;
   margin: 30px 33px 30px 52px;
-
-
 }
 
 /* О нас */
@@ -739,6 +738,7 @@ img {
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
+  margin-left: 17px;
 }
 
 .about-contacts-button {
@@ -947,13 +947,20 @@ img {
   background-image: url(../img/twitter-active.svg);
 }
 
+.footer-phone-number-container {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .footer-phone-number {
   color: var(--basic-white);
   line-height: 19px;
   text-decoration: none;
   text-align: right;
   padding: 3px 15px 5px;
-  margin: 0 -15px 0 51px;
+  margin: 0 -15px 0 0;
 }
 
 .footer-phone-number:focus {
@@ -1022,6 +1029,7 @@ img {
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-item {
@@ -1204,12 +1212,15 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
 .pagination-button {
   padding: 25px 30px 24px 29px;
+  background-color: var(--basic-grey-light);
+
 }
 
 .pagination-button:focus {

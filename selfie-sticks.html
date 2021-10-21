@@ -217,17 +217,15 @@
           <section class="catalog-sorting">
             <h2 class="main-button-typography catalog-title">Сортировка:</h2>
 
-            <ul class="catalog-sorting-criterions-list">
-              <li class="catalog-sorting-criterions-items">
-                <a class="catalog-sorting-criterions-link" href="#">По цене</a>
-              </li>
-              <li class="catalog-sorting-criterions-items">
-                <a class="catalog-sorting-criterions-link" href="#">По типу</a>
-              </li>
-              <li class="catalog-sorting-criterions-items">
-                <a class="catalog-sorting-criterions-link" href="#">По популярности</a>
-              </li>
-            </ul>
+            <form class="catalog-sorting-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="visually-hidden" for="sorting">Сортировка</label>
+              <select class="select-control" id="sorting" name="sorting">
+                <option value="popular first">Сначала популярные</option>
+                <option value="cheap first">Сначала дешёвые</option>
+                <option value="expensive first">Сначала дорогие</option>
+              </select>
+              <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+            </form>
 
             <ul class="catalog-sorting-ways-list">
               <li class="catalog-sorting-ways-item">
@@ -375,7 +373,10 @@
             </ul>
           </section>
 
-          <a class="footer-phone-number" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
+          <div class="footer-phone-number-container">
+            <a class="footer-phone-number" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
+          </div>
+
         </div>
 
         <!--Соц. сети-->
