@@ -52,36 +52,41 @@
                 <span class="catalog-categories-name">Каталог товаров</span>
               </a>
             </div>
-            <ul class="catalog-categories-list" style="display: none">
+            <ul class="catalog-categories-list">
 
               <li class="catalog-categories-item">
                 <a class="catalog-categories-link" href="#">
                   <span class="catalog-categories-name">Виртуальная реальность</span>
                 </a>
               </li>
-              <li class="catalog-categories-item">
-                <a class="catalog-categories-link" href="selfie-sticks.html">
-                  <span class="catalog-categories-name">Моноподы для cелфи</span>
-                </a>
-              </li>
-              <li class="catalog-categories-item">
-                <a class="catalog-categories-link" href="#">
-                  <span class="catalog-categories-name">Экшн-камеры</span>
-                </a>
-              </li>
+
               <li class="catalog-categories-item">
                 <a class="catalog-categories-link" href="#">
                   <span class="catalog-categories-name">Фитнес-браслеты</span>
                 </a>
               </li>
+
+              <li class="catalog-categories-item">
+                <a class="catalog-categories-link" href="#">
+                  <span class="catalog-categories-name">Квадрокоптеры</span>
+                </a>
+              </li>
+
+              <li class="catalog-categories-item">
+                <a class="catalog-categories-link" href="selfie-sticks.html">
+                  <span class="catalog-categories-name">Моноподы для cелфи</span>
+                </a>
+              </li>
+
               <li class="catalog-categories-item">
                 <a class="catalog-categories-link" href="#">
                   <span class="catalog-categories-name">Умные часы</span>
                 </a>
               </li>
-              <li class="catalog-categories-item">
+
+              <li class="catalog-categories-item catalog-categories-item-cameras">
                 <a class="catalog-categories-link" href="#">
-                  <span class="catalog-categories-name">Квадрокоптеры</span>
+                  <span class="catalog-categories-name">Экшн-камеры</span>
                 </a>
               </li>
 
@@ -118,7 +123,7 @@
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Каталог</a>
+            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Моноподы для селфи</a>
@@ -126,16 +131,16 @@
         </ul>
       </div>
 
-      <!---Фильтры-->
+
       <div class="catalog-container">
         <div class="left-side-background">
           <div class="left-side-title-background">
           </div>
         </div>
 
-
+        <!---Фильтры-->
         <section class="catalog-filter">
-          <h2 class="main-button-typography catalog-title catalog-filter-title-container">Фильтры:</h2>
+          <h2 class="main-button-typography catalog-title catalog-filter-title-container">Фильтр:</h2>
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
             <fieldset class="catalog-filter-group">
@@ -209,11 +214,12 @@
             </fieldset>
 
             <button class="main-button-typography filter-button button-yellow-dark-line" type="submit">Показать</button>
-
           </form>
         </section>
 
+
         <div class="catalog-right-part-container">
+          <!-- Сортировка-->
           <section class="catalog-sorting">
             <h2 class="main-button-typography catalog-title">Сортировка:</h2>
 
@@ -241,6 +247,7 @@
             </ul>
           </section>
 
+          <!-- Продукты-->
           <section class="catalog-products">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
 
@@ -249,14 +256,16 @@
                 <div class="product-visual">
                   <img class="product-card-image" src="img/selfie-sticks-product-1.jpg" alt="Любительская селфи-палка"
                        width="360" height="380">
-                  <a class="main-button-typography product-card-details-link" href="#">Подробнее</a>
+                  <a class="main-button-typography product-card-details-button button-yellow-dark-line" href="#">Подробнее</a>
                 </div>
+
                 <div class="product-info">
                   <a class="product-card-title-link" href="#">
                     <h3 class="product-card-title">Любительская селфи-палка</h3>
                   </a>
                   <span class="product-card-price">500 ₽</span>
                 </div>
+
                 <div class="product-badge visually-hidden">New</div>
               </li>
 
@@ -265,11 +274,11 @@
                   <img class="product-card-image" src="img/selfie-sticks-product-2.jpg"
                        alt="Профессиональная селфи-палка"
                        width="360" height="380">
-                  <a class="main-button-typography product-card-details-link" href="#">Подробнее</a>
+                  <a class="main-button-typography product-card-details-button button-yellow-dark-line" href="#">Подробнее</a>
                 </div>
                 <div class="product-info">
                   <a class="product-card-title-link" href="#">
-                    <h3 class="product-card-title">Профессиональная селфи-палка </h3>
+                    <h3 class="product-card-title">Профессиональная<br> селфи-палка </h3>
                   </a>
                   <span class="product-card-price">1 500 ₽</span>
                 </div>
@@ -280,11 +289,11 @@
                 <div class="product-visual">
                   <img class="product-card-image" src="img/selfie-sticks-product-3.jpg" alt="Непотопляемая селфи-палка"
                        width="360" height="380">
-                  <a class="main-button-typography product-card-details-link" href="#">Подробнее</a>
+                  <a class="main-button-typography product-card-details-button button-yellow-dark-line" href="#">Подробнее</a>
                 </div>
                 <div class="product-info">
                   <a class="product-card-title-link" href="#">
-                    <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                    <h3 class="product-card-title">Непотопляемая<br> селфи-палка</h3>
                   </a>
                   <span class="product-card-price">2 500 ₽</span>
                 </div>
@@ -296,7 +305,7 @@
                   <img class="product-card-image" src="img/selfie-sticks-product-4.jpg"
                        alt="Селфи-палка «Следуй за мной»"
                        width="360" height="380">
-                  <a class="main-button-typography product-card-details-link" href="#">Подробнее</a>
+                  <a class="main-button-typography product-card-details-button button-yellow-dark-line" href="#">Подробнее</a>
                 </div>
                 <div class="product-info">
                   <a class="product-card-title-link" href="#">
@@ -312,7 +321,7 @@
 
             <ol class="pagination">
               <li class="pagination-item pagination-prev">
-                <a class="main-button-typography pagination-button pagination-disabled">
+                <a class="main-button-typography pagination-button pagination-disabled"  href="#">
                   <span class="pagination-text">Назад</span>
                 </a>
               </li>

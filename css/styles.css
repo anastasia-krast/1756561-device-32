@@ -46,6 +46,7 @@
 
   --basic-grey-light: #EBEBEB;
   --basic-light: #F0F0F0;
+  --basic-light-rgb: 240, 240, 240;
 
   --basic-white: #FFFFFF;
   --basic-white-rgb: 255, 255, 255;
@@ -126,9 +127,7 @@ img {
   flex-direction: column;
   width: 1160px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 38px;
-  padding-bottom: 30px;
+  padding: 0 38px 37px 40px;
   box-sizing: border-box;
 }
 
@@ -244,6 +243,7 @@ img {
 
 .navigation-item-catalog {
   margin-right: auto;
+  width: 320px;
 }
 
 .navigation-item-warranty {
@@ -276,20 +276,16 @@ img {
 }
 
 .catalog-categories-list {
-  margin: 31px 0 13px 5px;
+  margin: 32px 0 15px 5px;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-flow: column wrap;
-  height: 117px;
+  display: grid;
+  grid-template-columns: 239px 201px 239px;
+  row-gap: 10px;
 }
 
 .catalog-categories-item {
-  margin: 0 16px 9px 0;
-}
-
-.catalog-categories-item:nth-child(5n+5) {
-  flex-basis: 58%;
+  margin: 0;
 }
 
 .catalog-categories-link {
@@ -307,11 +303,15 @@ img {
   border-radius: 25px;
 }
 
+.catalog-categories-item-cameras {
+  grid-row: 3/4;
+}
+
 /* Слайдер */
 
 
 .slider-list {
-  margin: -30px 0 0;
+  margin: -37px 0 0;
   padding: 0 0 65px;
   box-shadow: inset 0 150px var(--special-yellow-light);
 }
@@ -670,14 +670,18 @@ img {
 }
 
 .services-rare-items-link {
-  display: grid;
-  grid-template-columns: 125px auto 125px;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: var(--basic-light);
   font-size: 20px;
   line-height: 23px;
   margin: 5px 0;
+}
 
+.services-rare-items-text {
+  padding: 38px 0 39px;
+  width: 800px;
 }
 
 .services-rare-items-link:focus {
@@ -687,21 +691,21 @@ img {
 
 .services-rare-items-link::before {
   content: "";
-  display: block;
+  background-image: url("../img/icon-delivery.svg");
   background-color: var(--special-yellow-light);
+  background-repeat: no-repeat;
   width: 125px;
-  height: 100px;
+  background-position: center;
 }
 
 .services-rare-items-link::after {
   content: "";
-  display: block;
-  width: 40px;
   height: 40px;
+  width: 40px;
   background-color: rgba(var(--basic-grey-rgb), 0.5);
   background-image: url("../img/icon-info.svg");
   border-radius: 100%;
-  margin: 30px 33px 30px 52px;
+  margin: auto 33px auto 52px;
 }
 
 /* О нас */
@@ -798,6 +802,20 @@ img {
 .mail-field {
   width: 601px;
   box-sizing: border-box;
+}
+
+.subscribe-note {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.subscribe-note::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/icon-check-sign.svg");
+  margin-right: 21px;
 }
 
 /* Футер */
@@ -1090,11 +1108,14 @@ img {
   width: 200px;
   text-align: left;
   margin: 0;
-  padding: 25px 68px 24px 60px;
+  padding: 25px 0 26px 60px;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .catalog-filter-title-container {
   background-color: var(--basic-grey);
+  padding-right: 68px;
 }
 
 .catalog-filter-form {
@@ -1131,6 +1152,7 @@ img {
   background-color: var(--basic-grey-light);
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-left: 12px;
 }
 
@@ -1162,10 +1184,35 @@ img {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  column-gap: 40px;
+  row-gap: 46px;
 }
 
 .product-card {
   width: 360px;
+  position: relative;
+}
+
+.product-visual {
+  position: relative;
+}
+
+.product-card-details-button {
+  width: 180px;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 180px 90px;
+}
+
+.product-card-details-button:hover {
+  opacity: 100%;
+  background-color: rgba(var(--basic-light-rgb), 0.8);
+  z-index: 1;
 }
 
 .product-card-title-link {
@@ -1173,11 +1220,19 @@ img {
   text-decoration: none;
 }
 
+.product-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+}
+
 .product-card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
+  width: 280px;
+  margin: 0;
 }
 
 .product-card-price {
@@ -1185,23 +1240,35 @@ img {
   line-height: 21px;
   text-align: right;
   color: var(--basic-dark);
+  margin: 2px 0 0;
+  width: 80px;
 }
 
 .product-badge {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 56px;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.6;
+  border: 2px solid var(--basic-black);
+  border-radius: 100%;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  padding: 0 7px 0 9px;
+  box-sizing: border-box;
+  max-width: 60px;
 }
 
 .show-more-button {
+  font-size: 16px;
+  line-height: 19px;
   border: 3px solid rgba(var(--basic-black-rgb), 0.1);
   background-color: var(--basic-white);
-  padding: 14px 0;
+  padding: 15px 0;
   margin: 46px 0 51px 0;
   width: 100%;
 }
@@ -1218,13 +1285,15 @@ img {
 }
 
 .pagination-button {
-  padding: 25px 30px 24px 29px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 25px 30px 24px;
   background-color: var(--basic-grey-light);
 
 }
 
 .pagination-button:focus {
-  padding: 21px 25px 20px 24px;
+  padding: 20px 25px 19px;
   border: 5px solid var(--special-purple);
   background-color: var(--basic-light);
 }
