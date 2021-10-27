@@ -45,6 +45,7 @@
   --basic-grey-rgb: 220, 220, 220;
 
   --basic-grey-light: #EBEBEB;
+
   --basic-light: #F0F0F0;
   --basic-light-rgb: 240, 240, 240;
 
@@ -159,19 +160,35 @@ img {
   color: inherit;
   text-decoration: none;
   padding: 3px 22px 5px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation-link:hover {
+  color: rgba(var(--basic-black-rgb), 0.6);
+  border: none;
+  padding: 3px 22px 5px 12px;
 }
 
 .navigation-link:focus {
+  color: var(--basic-black);
   padding: 1px 20px 3px 10px;
   border: 2px solid var(--special-purple);
   border-radius: 20px;
 }
 
-.navigation-link-enter {
+.navigation-link:active {
+  color: rgba(var(--basic-black-rgb), 0.3);
+  border: none;
+  padding: 3px 22px 5px 12px;
+}
+
+.navigation-text-enter {
   margin-right: auto;
 }
 
-.navigation-link-compare {
+.navigation-text-compare {
   margin-right: 5px;
 }
 
@@ -182,7 +199,7 @@ img {
 }
 
 .navigation-text-sign-out {
-  opacity: 0.3;
+  color: rgba(var(--basic-black-rgb), 0.3);
   line-height: 32px;
 }
 
@@ -197,7 +214,6 @@ img {
 
 .navigation-text-compare::before {
   content: "";
-  display: block;
   background-image: url(../img/icon-compare.svg);
   width: 32px;
   height: 32px;
@@ -206,17 +222,22 @@ img {
 
 .navigation-text-cart::before {
   content: "";
-  display: block;
   background-image: url(../img/icon-cart.svg);
   width: 32px;
   height: 32px;
   margin-right: 2px;
 }
 
-.cart-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.navigation-text-enter:hover:before, .navigation-text-compare:hover:before, .navigation-text-cart:hover:before {
+  opacity: 0.6;
+}
+
+.navigation-text-enter:focus:before, .navigation-text-compare:focus:before, .navigation-text-cart:focus:before {
+  opacity: 1;
+}
+
+.navigation-text-enter:active:before, .navigation-text-compare:active:before, .navigation-text-cart:active:before {
+  opacity: 0.3;
 }
 
 .goods-number {
@@ -230,6 +251,7 @@ img {
   padding: 2px 6px;
   margin-right: -14px;
   z-index: 1;
+  order: -1;
 }
 
 .navigation-list-shop {
@@ -250,15 +272,10 @@ img {
   margin-right: 38px;
 }
 
-.big-navigation-link {
+.big-navigation-catalog-link, .big-navigation-link {
   padding: 14px 20px 15px;
   display: block;
-}
-
-.big-navigation-link:focus {
-  border: 2px solid var(--special-purple);
-  border-radius: 25px;
-  padding: 12px 18px 13px;
+  position: relative;
 }
 
 .navigation-item-catalog-icon {
@@ -269,23 +286,82 @@ img {
 
 .navigation-item-catalog-icon::after {
   content: "";
-  display: block;
   width: 50px;
   height: 50px;
   background-image: url(../img/icon-plus.svg);
 }
 
+.navigation-item-catalog-icon:hover:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/icon-minus.svg);
+}
+
+.navigation-item-catalog-icon:active:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/icon-minus.svg);
+  opacity: 0.3;
+}
+
+.big-navigation-link::after {
+  display: none;
+  content: "";
+  height: 2px;
+  background-color: var(--basic-black);
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 8px;
+}
+
+.big-navigation-link:hover:after {
+  display: block;
+}
+
+.big-navigation-link:focus:after {
+  display: none;
+}
+
+.big-navigation-link:active:after {
+  display: block;
+}
+
+.big-navigation-catalog-link:focus, .big-navigation-link:focus {
+  border: 2px solid var(--special-purple);
+  border-radius: 25px;
+  padding: 12px 18px 13px;
+}
+
+.big-navigation-catalog-link:active {
+  border: none;
+  padding: 14px 20px 15px;
+  opacity: 0.3;
+}
+
+.big-navigation-link:active {
+  opacity: 0.3;
+  border: none;
+  padding: 14px 20px 15px;
+}
+
 .catalog-categories-list {
-  margin: 32px 0 15px 5px;
+  margin: 27px 0 15px 5px;
   padding: 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: 239px 201px 239px;
-  row-gap: 10px;
+  row-gap: 6px;
 }
 
 .catalog-categories-item {
   margin: 0;
+}
+
+.catalog-categories-item:last-child {
+  grid-column: span 2;
 }
 
 .catalog-categories-link {
@@ -294,17 +370,23 @@ img {
   color: inherit;
   text-decoration: none;
   padding: 3px 15px 5px;
+}
 
+.catalog-categories-link:hover {
+  opacity: 0.6;
 }
 
 .catalog-categories-link:focus {
   padding: 1px 13px 3px;
   border: 2px solid var(--special-purple);
   border-radius: 25px;
+  opacity: 1;
 }
 
-.catalog-categories-item-cameras {
-  grid-row: 3/4;
+.catalog-categories-link:active {
+  opacity: 0.3;
+  border: none;
+  padding: 3px 15px 5px;
 }
 
 /* Слайдер */
@@ -354,10 +436,25 @@ img {
   text-decoration: none;
 }
 
-.button-yellow-line, .button-yellow-dark-line {
+.button-yellow-line {
+  height: 20px;
+  padding: 14px 0 16px;
+  z-index: 0;
+}
+
+.button-yellow-dark-line {
   height: 20px;
   padding: 10px 0;
   z-index: 0;
+}
+
+
+.button-yellow-line:hover {
+  background-color: var(--special-yellow-light);
+}
+
+.button-yellow-dark-line:hover {
+  background-color: var(--special-yellow-dark);
 }
 
 .button-yellow-line::after {
@@ -380,9 +477,31 @@ img {
   z-index: -1;
 }
 
+.button-yellow-line:focus:after, .button-yellow-dark-line:focus:after {
+  background-color: var(--special-purple);
+}
+
+.button-yellow-line:active:after, .button-yellow-dark-line:active:after {
+  content: none;
+}
+
+.button-yellow-line:focus, .button-yellow-dark-line:focus {
+  background-color: transparent;
+}
+
+.button-yellow-line:active {
+  background-color: var(--special-yellow-light);
+  color: rgba(var(--basic-black-rgb), 0.3);
+}
+
+.button-yellow-dark-line:active {
+  background-color: var(--special-yellow-dark);
+  color: rgba(var(--basic-black-rgb), 0.3);
+}
+
 .button-details {
   width: 220px;
-  margin: 10px 0 60px;
+  margin: 6px 0 54px;
 }
 
 .slider-item-specifications-list {
@@ -447,10 +566,8 @@ img {
   width: 160px;
 }
 
-
 .categories-link::before {
   content: "";
-  display: block;
   background: var(--special-yellow-light);
   width: 160px;
   height: 160px;
@@ -684,9 +801,21 @@ img {
   width: 800px;
 }
 
+.services-rare-items-link:hover {
+  background-color: var(--basic-grey-light);
+}
+
 .services-rare-items-link:focus {
   margin: 0 -5px;
   border: 5px solid var(--special-purple);
+  background-color: var(--basic-light);
+}
+
+.services-rare-items-link:active {
+  margin: 5px 0;
+  border: none;
+  background-color: var(--basic-grey-light);
+  color: rgba(var(--basic-black-rgb), 0.3);
 }
 
 .services-rare-items-link::before {
@@ -696,6 +825,19 @@ img {
   background-repeat: no-repeat;
   width: 125px;
   background-position: center;
+}
+
+.services-rare-items-link:hover:before {
+  background-color: var(--special-yellow-dark);
+}
+
+.services-rare-items-link:focus:before {
+  background-color: var(--special-yellow-light);
+}
+
+.services-rare-items-link:active:before {
+  background-color: var(--special-yellow-dark);
+  background-image: url("../img/icon-delivery-active.svg");
 }
 
 .services-rare-items-link::after {
@@ -708,10 +850,24 @@ img {
   margin: auto 33px auto 52px;
 }
 
+.services-rare-items-link:hover:after {
+  background-image: url("../img/icon-info-hover.svg");
+  background-color: rgba(var(--basic-grey-rgb), 1);
+}
+
+.services-rare-items-link:focus:after {
+  background-image: url("../img/icon-info.svg");
+  background-color: rgba(var(--basic-grey-rgb), 0.5);
+}
+
+.services-rare-items-link:active:after {
+  background-color: rgba(var(--basic-grey-rgb), 1);
+}
+
 /* О нас */
 
 .about {
-  margin-bottom: 77px;
+  margin-bottom: 71px;
 }
 
 .about-contacts-title {
@@ -728,7 +884,7 @@ img {
 }
 
 .delivery-companies-list {
-  margin: 40px 0 47px;
+  margin: 40px 0 43px;
   padding: 0 0 0 18px;
 }
 
@@ -747,6 +903,7 @@ img {
 
 .about-contacts-button {
   width: 260px;
+
 }
 
 .contacts-address {
@@ -773,8 +930,8 @@ img {
 }
 
 .contacts-schedule {
-  margin: 0;
-  padding: 0 0 57px;
+  margin: 0 0 53px;
+  padding: 0;
   list-style-type: none
 }
 
@@ -793,6 +950,25 @@ img {
 .subscribe-button {
   border: 3px solid rgba(var(--basic-black-rgb), 0.1);
   padding: 14px 40px;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  border: 3px solid var(--basic-black);
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+}
+
+.subscribe-button:focus {
+  border: 3px solid var(--special-purple);
+  background-color: transparent;
+  color: var(--basic-black);
+}
+
+.subscribe-button:active {
+  border: 3px solid var(--basic-black);
+  background-color: var(--basic-black);
+  color: rgba(var(--basic-white-rgb), 0.3);
 }
 
 .newsletter-form {
@@ -874,15 +1050,19 @@ img {
 
 .footer-button {
   color: var(--basic-white);
-  padding: 14px 20px 15px;
-  display: flex;
+  /*padding: 14px 20px 15px;*/
+  /*display: block;*/
+  /*position: relative;*/
 }
 
-.footer-button:focus {
-  border: 2px solid var(--special-purple);
-  border-radius: 25px;
-  padding: 12px 18px 13px;
+.footer-button::after {
+  background-color: var(--special-yellow-dark);
 }
+
+.footer-button:hover {
+  color: var(--special-yellow-dark);
+}
+
 
 /* Соц сети */
 
@@ -981,10 +1161,24 @@ img {
   margin: 0 -15px 0 0;
 }
 
+.footer-phone-number:hover {
+  color: var(--special-yellow-dark);
+  opacity: 1;
+}
+
 .footer-phone-number:focus {
+  color: var(--basic-white);
   padding: 1px 13px 3px;
   border: 2px solid var(--special-purple);
   border-radius: 25px;
+  opacity: 1;
+}
+
+.footer-phone-number:active {
+  color: var(--special-yellow-dark);
+  padding: 3px 15px 5px;
+  border: none;
+  opacity: 0.3;
 }
 
 /* Логотип Академии */
