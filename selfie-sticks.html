@@ -221,15 +221,25 @@
               <button class="visually-hidden" type="submit">Отсортировать продукты</button>
             </form>
 
-            <ul class="catalog-sorting-ways-list">
-              <li class="catalog-sorting-ways-item">
-                <a class="catalog-sorting-ways-link" href="#">
+            <ul class="sorting-indicator">
+              <li class="sorting-indicator-item">
+                <a class="sorting-indicator-link" href="#">
                   <span class="visually-hidden">По возрастанию</span>
+                  <svg class="sorting-indicator-icon sorting-indicator-icon-not-current" aria-hidden="true"
+                       focusable="false" width="11" height="10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0 11 10H0"/>
+                  </svg>
                 </a>
               </li>
               <li class="catalog-sorting-ways-item">
-                <a class="catalog-sorting-ways-link" href="#">
+                <a class="sorting-indicator-link">
                   <span class="visually-hidden">По убыванию</span>
+                  <svg class="sorting-indicator-icon sort-down sorting-indicator-icon-current" aria-hidden="true"
+                       focusable="false" width="11" height="10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0 11 10H0"/>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -309,12 +319,12 @@
 
             <ol class="pagination">
               <li class="pagination-item pagination-prev">
-                <a class="main-button-typography pagination-button pagination-disabled" href="#">
+                <a class="main-button-typography pagination-button pagination-disabled">
                   <span class="pagination-text">Назад</span>
                 </a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link" href="#">1</a>
+                <a class="pagination-link">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
