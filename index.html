@@ -18,8 +18,11 @@
           <!--Поиск-->
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-1">Поиск</label>
-            <input class="search-field" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
-            <button class="search-button visually-hidden" type="submit">Найти</button>
+            <div class="search-form-input-wrapper">
+              <input class="search-field search-field-active" type="search" id="search-1" name="search-request"
+                     placeholder="Поиск по сайту">
+              <button class="search-button search-button-active" type="submit">Найти</button>
+            </div>
           </form>
 
           <!--Навигация верхний блок-->
@@ -111,7 +114,7 @@
               <div class="slider-container-text one-half-box">
                 <div class="slider-item-number">01</div>
                 <strong class="title-typography slider-item-tagline">Порхает как бабочка, жалит как пчела!</strong>
-                <p class="main-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                <p class="main-text">Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером,
                   замаскированным
                   под стандартную камеру.</p>
                 <a class="main-button-typography button-details button-yellow-line" href="#">Подробнее</a>
@@ -186,14 +189,16 @@
           </ol>
 
           <!--Навигация слайдера-->
-          <button class="photo-slider-button slider-prev" type="button" style="display: none">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <button class="photo-slider-button slider-next" type="button" style="display: none">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
+          <div class="photo-slider-buttons-wrapper">
+            <button class="photo-slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="photo-slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
 
-          <div class="main-slider-pagination" style="display: none">
+          <div class="main-slider-pagination">
             <button type="button" class="main-slider-pagination-button slider-pagination-button-current">
               <span class="visually-hidden">Квадрокоптер</span>
             </button>
