@@ -10,7 +10,7 @@
       <h1 class="visually-hidden">Магазин электроники «Девайс»</h1>
       <nav class="navigation">
         <a class="logo-header">
-          <img class="logo" src="img/device-logo-header.svg" alt="Логотип магазина электроники «Девайс»" width="145"
+          <img class="logo" src="img/logo-device-header.svg" alt="Логотип магазина электроники «Девайс»" width="145"
                height="36">
         </a>
 
@@ -19,9 +19,17 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-1">Поиск</label>
             <div class="search-form-input-wrapper">
-              <input class="search-field search-field-active" type="search" id="search-1" name="search-request"
+              <input class="search-field search-field-default" type="search" id="search-1" name="search-request"
                      placeholder="Поиск по сайту">
-              <button class="search-button search-button-active" type="submit">Найти</button>
+              <!--Класс search-field-default означает, что поле находится в дефолтном состоянии
+              (пользователь еще не начал вводить текст).
+              Чтобы сменить состояние поля на активное (пользователь начал вводить текст),
+              заменить класс search-field-default на search-field-active-->
+              <button class="search-button" type="submit">Найти</button>
+              <!-- При дефолтном состоянии поля (пользователь еще не начал вводить текст), кнопка неактивна.
+              Кнопка активна только в том случае, если поле находится в активном состоянии
+              (если пользователь начал вводить текст).
+              Чтобы привести кнопку в активное состояние, добавить к классу search-button класс search-button-active-->
             </div>
           </form>
 
@@ -33,6 +41,45 @@
               <div class="goods-number">2</div>
               Корзина
             </a>
+
+            <!--Всплывающая корзина-->
+            <div class="popover">
+              <!--Чтобы отобразить всплывающую корзину, в div выше к классу popover добавить класс popover-open-->
+              <button class="visually-hidden" href="#">Закрыть</button>
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <a class="cart-item-link" href="#">
+                      <img class="cart-preview" src="img/product-cart-small-1.jpg" width="41" height="43">
+                      <p class="cart-item-title">Любительская селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-delete-button button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-item-link" href="#">
+                      <img class="cart-preview" src="img/product-cart-small-2.jpg" width="41" height="43">
+                      <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    </a>
+                    <button type="button" class="cart-item-delete-button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="cart-summary-wrapper">
+                  <span class="cart-summary">Товаров: 2</span>
+                  <span class="cart-summary-cost">Сумма: 2000 ₽</span>
+                </div>
+
+                <a class="main-button-typography cart-button-white" href="#">Открыть корзину</a>
+
+              </div>
+
+
+            </div>
           </div>
         </div>
 
@@ -387,8 +434,13 @@
               <!--Форма подписки-->
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="email-1">Адрес для рассылки</label>
-                <input class="mail-field" type="email" id="email-1" name="newsletter-email" placeholder="Ваш e-mail"
+                <input class="mail-field mail-field-default" type="email" id="email-1"
+                       name="newsletter-email" placeholder="Ваш e-mail"
                        required>
+                <!--Класс mail-field-default означает, что поле находится в дефолтном состоянии
+                (пользователь еще не начал вводить текст).
+                Чтобы сменить состояние поля на активное (пользователь начал вводить текст),
+                заменить класс mail-field-default на mail-field-active-->
                 <button class="main-button-typography subscribe-button" type="submit">Подписаться</button>
               </form>
 
@@ -404,7 +456,7 @@
       <div class="page-container footer-container">
 
         <a class="logo-link">
-          <img class="logo" src="img/device-logo-footer.svg" alt="Логотип магазина электроники «Девайс»" width="145"
+          <img class="logo" src="img/logo-device-footer.svg" alt="Логотип магазина электроники «Девайс»" width="145"
                height="36">
         </a>
 
@@ -471,5 +523,80 @@
 
       </div>
     </footer>
+
+    <!--Модальное окно-->
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-order">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <!--В этой форме класс order-form-field-default означает, что поле находится в дефолтном состоянии
+              (пользователь еще не начал вводить текст).
+              Чтобы сменить состояние поля на активное (пользователь начал вводить текст),
+              заменить класс order-form-field-default на order-form-field-active-->
+
+            <div class="fields-wrapper">
+              <div class="order-form-wrapper grid-columns-2">
+                <label class="order-form-label" for="name-1">Ваше имя:</label>
+                <div class="order-form-field-wrapper order-form-field-name">
+                  <input class="order-form-field order-form-field-default" type="text" id="name-1"
+                         name="name" placeholder="Имя Фамилия">
+                  <div class="order-form-field-feedback">Подпись под полем для ввода</div>
+                </div>
+              </div>
+
+              <div class="order-form-wrapper grid-columns-2">
+                <label class="order-form-label" for="email-2">Ваш e-mail:</label>
+                <div class="order-form-field-wrapper order-form-field-email">
+                  <input class="order-form-field order-form-field-default" type="email"
+                         id="email-2" name="email" placeholder="Введите e-mail" required>
+                  <div class="order-form-field-feedback">Подпись под полем для ввода</div>
+                </div>
+              </div>
+
+              <div class="order-form-wrapper grid-columns-3">
+                <label class="order-form-label" for="request-1">Что нужно привезти:</label>
+                <input class="order-form-field order-form-field-default" type="text" id="request-1" name="request"
+                       placeholder="В свободной форме" required>
+                <div class="order-form-field-feedback">Подпись под полем для ввода</div>
+              </div>
+
+              <div class="order-form-wrapper grid-columns-1">
+                <div class="order-form-label-wrapper">
+                  <label class="order-form-label" for="quantity-1">Количество:</label>
+                  <div class="order-form-tooltip">
+                    <button class="order-form-tooltip-icon" type="button">
+                      <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    </button>
+                    <div class="order-form-tooltip-text">
+                      Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
+                    </div>
+                  </div>
+                </div>
+                <div class="order-form-field-wrapper">
+                  <input class="order-form-field order-form-field-quantity order-form-field-default" type="number"
+                         id="quantity-1" name="quantity" value="1">
+                  <button class="range-quantity quantity-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество на 1</span>
+                  </button>
+                  <button class="range-quantity quantity-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество на 1</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="main-button-typography filter-modal-button button-yellow-dark-line" type="submit">Отправить
+            </button>
+          </form>
+
+        </section>
+      </div>
+    </div>
   </body>
 </html>
