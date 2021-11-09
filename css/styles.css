@@ -308,12 +308,6 @@ img {
   margin-left: auto;
 }
 
-.navigation-text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .navigation-text-sign-out {
   padding-left: 6px;
   color: rgba(var(--basic-black-rgb), 0.3);
@@ -1846,10 +1840,6 @@ img {
   background-color: var(--basic-black);
 }
 
-.range-bar-control {
-  position: relative;
-}
-
 .range-toggle {
   position: absolute;
   top: -8px;
@@ -1878,13 +1868,6 @@ img {
 
 .toggle-max {
   right: -9px;
-}
-
-.catalog-filter-input-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 15px;
 }
 
 .catalog-filter-label {
@@ -2735,6 +2718,6 @@ img {
 .mail-field-default:disabled,
 .subscribe-button:disabled,
 .order-form-field-default:disabled,
-.filter-modal-button {
+.filter-modal-button:disabled {
   opacity: 0.5;
 }
