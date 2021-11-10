@@ -18,9 +18,7 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-1">Поиск.</label>
             <div class="search-form-input-wrapper">
-              <input class="search-field search-field-default" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
-              <!--Класс search-field-default означает, что поле находится в дефолтном состоянии (пользователь еще не начал вводить текст).
-              Чтобы сменить состояние поля на активное (пользователь начал вводить текст), заменить класс search-field-default на search-field-active-->
+              <input class="search-field" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
               <button class="search-button" type="submit">Найти</button>
             </div>
           </form>
@@ -150,17 +148,15 @@
                   <button class="range-toggle toggle-min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="range-toggle toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-
                   <label class="catalog-filter-label" style="left: -15px;">
                     <!--Величина смещения влево (style="left: -x") будет вычисляться автоматически, где х = 0,5 * (ширина элемента label)-->
                     <span class="catalog-filter-label-text">от</span>
                     <input class="catalog-filter-input" type="number" value="0" name="min-price" style="width: 10px">
                     <!--Ширина инпута будет высчитываться автоматически по ширине контента внутри-->
                   </label>
-
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
                   <label class="catalog-filter-label" style="right: -29px;">
                     <!--Величина смещения вправо (style="right: -x") будет вычисляться автоматически, где х = 0,5 * (ширина элемента label)-->
                     <span class="catalog-filter-label-text">до</span>

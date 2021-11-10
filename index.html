@@ -19,9 +19,7 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-1">Поиск.</label>
             <div class="search-form-input-wrapper">
-              <input class="search-field search-field-default" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
-              <!--Класс search-field-default означает, что поле находится в дефолтном состоянии (пользователь еще не начал вводить текст).
-              Чтобы сменить состояние поля на активное (пользователь начал вводить текст), заменить класс search-field-default на search-field-active-->
+              <input class="search-field" type="search" id="search-1" name="search-request" placeholder="Поиск по сайту">
               <button class="search-button" type="submit">Найти</button>
             </div>
           </form>
@@ -121,7 +119,7 @@
           <ol class="slider-list">
             <li class="index-columns">
               <h3 class="visually-hidden">Квадрокоптер.</h3>
-              <a href="#"><img src="img/slider-1-drone.png" alt="" width="560" height="560"></a>
+              <img src="img/slider-1-drone.png" alt="" width="560" height="560">
               <div class="one-half-box">
                 <div class="slider-item-number">01</div>
                 <strong class="title-typography slider-item-tagline">Порхает как бабочка, жалит как пчела!</strong>
@@ -143,7 +141,7 @@
 
             <li class="index-columns slide-hidden">
               <h3 class="visually-hidden">Фитнес-браслет.</h3>
-              <a href="#"><img src="img/slider-2-fitness-band.png" alt="" width="560" height="560"></a>
+              <img src="img/slider-2-fitness-band.png" alt="" width="560" height="560">
               <div class="one-half-box">
                 <div class="slider-item-number">02</div>
                 <strong class="title-typography slider-item-tagline">Худеем <br>правильно!</strong>
@@ -161,7 +159,7 @@
 
             <li class="index-columns slide-hidden">
               <h3 class="visually-hidden">Селфи-палка.</h3>
-              <a href="#"><img src="img/slider-3-selfie-stick.png" alt="" width="560" height="560"></a>
+              <img src="img/slider-3-selfie-stick.png" alt="" width="560" height="560">
               <div class="one-half-box">
                 <div class="slider-item-number">03</div>
                 <strong class="title-typography slider-item-tagline">Делай селфи, <br>как Бен Стиллер!</strong>
@@ -383,9 +381,7 @@
               <!--Форма подписки-->
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="email-1">Адрес для рассылки.</label>
-                <input class="mail-field mail-field-default" type="email" id="email-1" name="newsletter-email" placeholder="Ваш e-mail" required>
-                <!--Класс mail-field-default означает, что поле находится в дефолтном состоянии (пользователь еще не начал вводить текст).
-                Чтобы сменить состояние поля на активное (пользователь начал вводить текст), заменить класс mail-field-default на mail-field-active-->
+                <input class="mail-field" type="email" id="email-1" name="newsletter-email" placeholder="Ваш e-mail" required>
                 <button class="main-button-typography subscribe-button" type="submit">Подписаться</button>
               </form>
 
@@ -475,13 +471,11 @@
           <h2 class="modal-title">Доставка под заказ</h2>
 
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <!--В этой форме класс order-form-field-default означает, что поле находится в дефолтном состоянии (пользователь еще не начал вводить текст).
-            Чтобы сменить состояние поля на активное (пользователь начал вводить текст), заменить класс order-form-field-default на order-form-field-active-->
             <div class="fields-wrapper">
               <div class="order-form-wrapper grid-columns-2">
                 <label class="order-form-label" for="name-1">Ваше имя:</label>
                 <div class="order-form-field-wrapper order-form-field-name">
-                  <input class="order-form-field order-form-field-default" type="text" id="name-1" name="name" placeholder="Имя Фамилия">
+                  <input class="order-form-field order-form-field-basic" type="text" id="name-1" name="name" placeholder="Имя Фамилия">
                   <div class="order-form-field-feedback">Подпись под полем для ввода</div>
                 </div>
               </div>
@@ -489,14 +483,14 @@
               <div class="order-form-wrapper grid-columns-2">
                 <label class="order-form-label" for="email-2">Ваш e-mail:</label>
                 <div class="order-form-field-wrapper order-form-field-email">
-                  <input class="order-form-field order-form-field-default" type="email" id="email-2" name="email" placeholder="Введите e-mail" required>
+                  <input class="order-form-field order-form-field-basic" type="email" id="email-2" name="email" placeholder="Введите e-mail" required>
                   <div class="order-form-field-feedback">Подпись под полем для ввода</div>
                 </div>
               </div>
 
               <div class="order-form-wrapper grid-columns-3">
                 <label class="order-form-label" for="request-1">Что нужно привезти:</label>
-                <input class="order-form-field order-form-field-default" type="text" id="request-1" name="request" placeholder="В свободной форме" required>
+                <input class="order-form-field order-form-field-basic" type="text" id="request-1" name="request" placeholder="В свободной форме" required>
                 <div class="order-form-field-feedback">Подпись под полем для ввода</div>
               </div>
 
@@ -513,8 +507,8 @@
                   </div>
                 </div>
                 <div class="order-form-field-wrapper">
-                  <input class="order-form-field order-form-field-quantity order-form-field-default" type="number"
-                         id="quantity-1" name="quantity" value="1">
+                  <input class="order-form-field order-form-field-quantity" type="number" id="quantity-1" name="quantity" value="1">
+                  <!-- После того, как пользователь заменил в этом поле дефолтное значение, поле переходит в активное состояние (в input нужно добавить класс order-form-field-quantity-active)-->
                   <button class="range-quantity quantity-minus" type="button">
                     <span class="visually-hidden">Уменьшить количество на 1.</span>
                   </button>

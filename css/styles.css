@@ -176,7 +176,8 @@ img {
   background-image: url("../img/icon-search.svg");
 }
 
-.search-field {
+.search-field,
+.search-field:hover {
   width: 516px;
   height: 40px;
   padding: 0 20px 0 50px;
@@ -194,10 +195,6 @@ img {
   display: none;
 }
 
-.search-field:-webkit-autofill {
-  box-shadow: inset 0 0 0 60px var(--special-yellow-dark);
-}
-
 .search-field::placeholder {
   color: rgba(var(--basic-black-rgb), 0.3);
 }
@@ -210,35 +207,29 @@ img {
   color: rgba(var(--basic-black-rgb), 0.3);
 }
 
-.search-field-default:-webkit-autofill {
-  border: 2px solid var(--special-yellow-dark);
-}
-
-.search-field-default:focus,
-.search-field-default:-webkit-autofill:focus {
+.search-field:focus,
+.search-field:active {
   border: 2px solid var(--special-purple);
   outline: none;
 }
 
-.search-field-active,
-.search-field-active:-webkit-autofill {
+.search-field:not(:placeholder-shown),
+.search-field:not(:placeholder-shown):hover,
+.search-field:not(:placeholder-shown):focus,
+.search-field:not(:placeholder-shown):active {
   padding-right: 180px;
   border: 2px solid var(--basic-black);
 }
 
-.search-field-active:focus {
-  outline: none;
+.search-field:not(:placeholder-shown):-webkit-autofill {
+  box-shadow: inset 0 0 0 60px var(--special-yellow-dark);
 }
 
 .search-button {
-  display: none;
-}
-
-.search-field-active + .search-button {
   position: absolute;
   top: 0;
   right: 0;
-  display: block;
+  display: none;
   width: 160px;
   height: 40px;
   padding: 0;
@@ -254,19 +245,23 @@ img {
   cursor: pointer;
 }
 
-.search-field-active + .search-button:hover {
+.search-field:not(:placeholder-shown) + .search-button {
+  display: block;
+}
+
+.search-field:not(:placeholder-shown) + .search-button:hover {
   color: var(--basic-white);
   background-color: var(--basic-black);
 }
 
-.search-field-active + .search-button:focus {
+.search-field:not(:placeholder-shown) + .search-button:focus {
   color: var(--basic-black);
   background-color: var(--special-yellow-light);
   border: 2px solid var(--special-purple);
   outline: none;
 }
 
-.search-field-active + .search-button:active {
+.search-field:not(:placeholder-shown) + .search-button:active {
   color: rgba(var(--basic-white-rgb), 0.3);
   background-color: var(--basic-black);
   border: 2px solid var(--basic-black);
@@ -1137,6 +1132,10 @@ img {
   pointer-events: none;
 }
 
+.tabs-button-current:focus {
+  outline: none;
+}
+
 .services-list {
   margin: 0;
   padding: 0;
@@ -1420,25 +1419,31 @@ img {
   color: rgba(var(--basic-dark-rgb), 0.5);
 }
 
-.mail-field-default:hover {
+.mail-field:hover {
   border-bottom: 3px solid rgba(var(--basic-black-rgb), 0.2);
 }
 
-.mail-field-default:focus {
+.mail-field:focus,
+.mail-field:active {
   background-color: var(--basic-grey);
   border-bottom: 3px solid rgba(var(--basic-black-rgb), 0.1);
   outline: none;
 }
 
-.mail-field-active {
+.mail-field:not(:placeholder-shown),
+.mail-field:not(:placeholder-shown):hover,
+.mail-field:not(:placeholder-shown):focus,
+.mail-field:not(:placeholder-shown):active {
+  background-color: transparent;
   border-bottom: 3px solid var(--basic-black);
-}
-
-.mail-field-active:focus {
   outline: none;
 }
 
-.mail-field-active:focus:invalid {
+.mail-field:not(:placeholder-shown):invalid,
+.mail-field:not(:placeholder-shown):invalid:hover,
+.mail-field:not(:placeholder-shown):invalid:focus,
+.mail-field:not(:placeholder-shown):invalid:active {
+  background-color: transparent;
   border-bottom: 3px solid var(--special-red);
   outline: none;
 }
@@ -1857,9 +1862,23 @@ img {
   outline: none;
 }
 
+.range-toggle:focus + .catalog-filter-label .catalog-filter-label-text,
+.range-toggle:focus + .catalog-filter-label .catalog-filter-input {
+  color: var(--special-purple);
+}
+
 .range-toggle:active {
   background: var(--basic-black);
   border: 2px solid var(--basic-black);
+}
+
+.range-toggle:active + .catalog-filter-label {
+  opacity: 1;
+}
+
+.range-toggle:active + .catalog-filter-label .catalog-filter-label-text,
+.range-toggle:active + .catalog-filter-label .catalog-filter-input {
+  color: var(--basic-black);
 }
 
 .toggle-min {
@@ -1997,6 +2016,21 @@ img {
 .catalog-filter-item-label:active .control-label,
 .catalog-filter-item-label:active .control-input:checked ~ .control-mark,
 .catalog-filter-item-label:active .control-input[type="checkbox"]:checked + .check-mark {
+  opacity: 0.2;
+}
+
+.control-input[type="checkbox"]:active + .check-mark {
+  fill: var(--basic-black);
+  opacity: 0.2;
+}
+
+.control-input[type="checkbox"]:active ~ .control-label {
+  color: var(--basic-black);
+  opacity: 0.2;
+}
+
+.control-input[type="checkbox"]:active ~ .control-mark {
+  border: 2px solid var(--basic-black);
   opacity: 0.2;
 }
 
@@ -2469,7 +2503,7 @@ img {
 }
 
 .order-form-label {
-  margin-bottom: 14px;
+  padding-bottom: 14px;
   font-family: inherit;
   font-weight: 700;
   line-height: 20px;
@@ -2546,7 +2580,7 @@ img {
   color: var(--basic-black);
 }
 
-.order-form-field-active:focus:invalid + .order-form-field-feedback {
+.order-form-field:not(:placeholder-shown):invalid + .order-form-field-feedback {
   color: var(--special-red);
 }
 
@@ -2608,40 +2642,75 @@ img {
   opacity: 0.6;
 }
 
-.order-form-field:-webkit-autofill {
-  box-shadow: inset 0 0 0 60px var(--basic-grey);
-}
-
-.order-form-field-active:-webkit-autofill {
-  padding: 17px 52px 17px 17px;
-  border: 3px solid var(--basic-black);
-}
-
-.order-form-field-default:hover {
+.order-form-field:hover {
   background-color: var(--basic-grey-light);
 }
 
-.order-form-field-default:focus {
+.order-form-field:focus,
+.order-form-field:active {
   background-color: var(--basic-light);
   outline: 5px solid var(--special-purple);
 }
 
-.order-form-field-active {
+.order-form-field-basic:not(:placeholder-shown),
+.order-form-field-basic:not(:placeholder-shown):hover,
+.order-form-field-basic:not(:placeholder-shown):focus,
+.order-form-field-basic:not(:placeholder-shown):active,
+.order-form-field-quantity-active,
+.order-form-field-quantity-active:hover,
+.order-form-field-quantity-active:focus,
+.order-form-field-quantity-active:active {
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: inset 0 0 0 3px var(--basic-black);
-}
-
-.order-form-field-active:focus {
   outline: none;
 }
 
-.order-form-field-active:focus:invalid {
+.order-form-field:not(:placeholder-shown):invalid,
+.order-form-field:not(:placeholder-shown):invalid:hover,
+.order-form-field:not(:placeholder-shown):invalid:focus,
+.order-form-field:not(:placeholder-shown):invalid:active {
   box-shadow: inset 0 0 0 3px var(--special-red);
 }
 
-.order-form-field-active:focus:invalid:-webkit-autofill {
-  box-shadow: none;
+.order-form-field:-webkit-autofill,
+.order-form-field:-webkit-autofill:hover,
+.order-form-field:-webkit-autofill:focus,
+.order-form-field:-webkit-autofill:active {
+  box-shadow: inset 0 0 0 60px var(--basic-grey);
+  border: 3px solid var(--basic-black);
+  outline: none;
+}
+
+.order-form-field:-webkit-autofill:invalid,
+.order-form-field:-webkit-autofill:invalid:hover,
+.order-form-field:-webkit-autofill:invalid:focus,
+.order-form-field:-webkit-autofill:invalid:active {
+  box-shadow: inset 0 0 0 60px var(--basic-grey);
+  border: 3px solid var(--special-red);
+  outline: none;
+}
+
+.order-form-field-basic:-webkit-autofill,
+.order-form-field-basic:-webkit-autofill:hover,
+.order-form-field-basic:-webkit-autofill:focus,
+.order-form-field-basic:-webkit-autofill:active,
+.order-form-field-basic:-webkit-autofill:invalid,
+.order-form-field-basic:-webkit-autofill:invalid:hover,
+.order-form-field-basic:-webkit-autofill:invalid:focus,
+.order-form-field-basic:-webkit-autofill:invalid:active {
+  padding: 17px 52px 17px 17px;
+}
+
+.order-form-field-quantity:-webkit-autofill,
+.order-form-field-quantity:-webkit-autofill:hover,
+.order-form-field-quantity:-webkit-autofill:focus,
+.order-form-field-quantity:-webkit-autofill:active,
+.order-form-field-quantity:-webkit-autofill:invalid,
+.order-form-field-quantity:-webkit-autofill:invalid:hover,
+.order-form-field-quantity:-webkit-autofill:invalid:focus,
+.order-form-field-quantity:-webkit-autofill:invalid:active {
+  padding: 17px 47px;
 }
 
 .range-quantity {
@@ -2714,10 +2783,10 @@ img {
   opacity: 0.1;
 }
 
-.search-field-default:disabled,
-.mail-field-default:disabled,
+.search-field:disabled,
+.mail-field:disabled,
 .subscribe-button:disabled,
-.order-form-field-default:disabled,
+.order-form-field:disabled,
 .filter-modal-button:disabled {
   opacity: 0.5;
 }
