@@ -965,7 +965,7 @@ img {
 }
 
 .category-1-VR::before {
-  background-image: url("../img/categories-01-VR.svg");
+  background-image: url("../img/categories-01-virtual-reality.svg");
 }
 
 .category-2-selfie-sticks::before {
@@ -994,7 +994,7 @@ img {
 }
 
 .category-1-VR:hover::before {
-  background-image: url("../img/categories-01-VR.svg");
+  background-image: url("../img/categories-01-virtual-reality.svg");
 }
 
 .category-2-selfie-sticks:hover::before {
@@ -1023,7 +1023,7 @@ img {
 }
 
 .category-1-VR:focus::before {
-  background-image: url("../img/categories-01-VR.svg");
+  background-image: url("../img/categories-01-virtual-reality.svg");
 }
 
 .category-2-selfie-sticks:focus::before {
@@ -1052,7 +1052,7 @@ img {
 }
 
 .category-1-VR:active::before {
-  background-image: url("../img/categories-01-VR-active.svg");
+  background-image: url("../img/categories-01-virtual-reality-active.svg");
 }
 
 .category-2-selfie-sticks:active::before {
