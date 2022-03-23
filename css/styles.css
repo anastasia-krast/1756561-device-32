@@ -548,7 +548,7 @@ img {
 }
 
 .navigation-item-warranty {
-  margin-right: 59px;
+  margin-right: 72px;
 }
 
 .big-navigation-catalog-link,
@@ -1102,7 +1102,7 @@ img {
 }
 
 .services-navigation-tabs {
-  width: 277px;
+  width: 276px;
   margin: 0;
   padding: 56px 0 47px;
   border-right: 7px solid var(--basic-black);
@@ -1790,7 +1790,6 @@ img {
 }
 
 .catalog-title {
-  width: 187px;
   margin: 0;
   padding: 25px 0 26px 60px;
   font-size: 16px;
@@ -2050,6 +2049,7 @@ img {
 
 .catalog-sorting {
   display: flex;
+  gap: 30px;
   flex-direction: row;
   align-items: center;
   padding-left: 12px;
@@ -2060,7 +2060,7 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  width: 217px;
+  width: 150px;
   margin-right: auto;
 }
 
